@@ -6,7 +6,7 @@ section: Protocol
 order: 4
 ---
 
-**Last updated 02 October, 2019**
+**Last updated 29 October, 2019**
 
 > [!warning]
 >
@@ -99,7 +99,9 @@ The following existing [arithmetic operators](https://docs.influxdata.com/influx
 | \| | Bitwise OR | <i class="fas fa-check"></i> |
 | ^ | Bitwise Exclusive-OR | <i class="fas fa-check"></i> |
 
-**Modulo** (%), **Bitwise AND** (&), **Bitwise OR** (|) and **Bitwise Exclusive-OR** (^), are **not yet supported** accross several metrics. They can still be applied between metrics and values.
+The **Modulo** (%) operator is **not yet supported** accross several metrics. It can still be applied between metrics and values.
+
+All the **bitwise** operation: **Bitwise AND** (&), **Bitwise OR** (|) and **Bitwise Exclusive-OR** (^) are only working on numbers (the float number will be automaticallly cast to integers).
 
 #### InfluxQL functions
 
@@ -157,9 +159,6 @@ The valid [influxQL functions](https://docs.influxdata.com/influxdb/v1.7/query_l
 | TRIPLE_EXPONENTIAL_MOVING_AVERAGE | metrics, period, (hold_period)?, (warmup_type)? | <i class="fas fa-times"></i> |
 | TRIPLE_EXPONENTIAL_DERIVATIVE | metrics, period, (hold_period)?, (warmup_type)? | <i class="fas fa-times"></i> |
 | RELATIVE_STRENGTH_INDEX | metrics, period, (hold_period)?, (warmup_type)? | <i class="fas fa-times"></i> |
-
-For the **bottom** and the **top** functions only the number parameter is supported **yet**.
-
 
 #### Data types and cast operations
 
